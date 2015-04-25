@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => "bootstrap3"
 gem 'jbuilder', '~> 2.0'
 
 gem 'annotate', '~> 2.6.5'

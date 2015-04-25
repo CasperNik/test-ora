@@ -1,21 +1,24 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @validatable
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.one-page
+  .one-page-inner
+    .container.one-form-content
+      .row
+        .col-sm-12
+          .center-block{style: 'width: 300px; margin-top: 5%;'}
+            %h2.green Sign up
+            = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+              = devise_error_messages!
+              .input-group.margin-bottom-20
+                %span.input-group-addon
+                  %i.fa.fa-envelope
+                = f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email'
+              .input-group.margin-bottom-20
+                %span.input-group-addon
+                  %i.fa.fa-lock
+                = f.password_field :password, autocomplete: "off",  class: 'form-control', placeholder: "Password #{@validatable ? "(#{@minimum_password_length} characters minimum)" : ''}"
+              .input-group.margin-bottom-20
+                %span.input-group-addon
+                  %i.fa.fa-lock
+                = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Password confirmation'
+              .actions
+                = f.submit "Sign up", class: 'btn-u btn-block'
+            = render "devise/shared/links"
