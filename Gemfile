@@ -14,6 +14,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
+gem 'annotate', '~> 2.6.5'
+
 # authorisation
 gem 'devise'
 
