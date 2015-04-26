@@ -39,7 +39,7 @@ end
 
 group :development do
   gem 'spring'
-  gem 'rack-mini-profiler'
+  # gem 'rack-mini-profiler'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails_best_practices'

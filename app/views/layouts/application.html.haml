@@ -6,6 +6,13 @@
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
-    .wrapper
-      = yield
+  %body.skin-3.no-skin
+    = render 'layouts/top_menu'
+    .main-container
+      = render 'layouts/side_bar'
+      .main-content
+        .page-content
+          .row
+            .col-md-12
+              = render 'devise/shared/notices'
+              = yield
