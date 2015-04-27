@@ -22,7 +22,7 @@ gem 'devise'
 
 # ember
 gem 'ember-rails'
-gem 'ember-source'
+gem 'ember-source', '~> 1.11.3'
 
 group :development, :test do
   gem 'pry-rails'

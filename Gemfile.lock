@@ -309,7 +309,7 @@ DEPENDENCIES
   database_cleaner
   devise
   ember-rails
-  ember-source
+  ember-source (~> 1.11.3)
   guard
   guard-annotate
   guard-bundler

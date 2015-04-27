@@ -1,0 +1,16 @@
+<div class="margin-bottom-10 pull-right">
+    {{#link-to 'blogs.new' class='btn-u btn-u-blue'}}Add new{{/link-to}}
+</div>
+<div class="clearfix"></div>
+<ul class="list-unstyled">
+    {{#each blog in model}}
+        <hr>
+        <li>
+            <h3>{{blog.title}}</h3>
+
+            <p>{{blog.text}}</p>
+        </li>
+        {{#link-to 'blog.edit' blog class='button btn-u btn-u-blue'}}Edit{{/link-to}}
+        <button {{action 'delete' blog.id}} class="button btn-u btn-u-red">Delete</button>
+    {{/each}}
+</ul>

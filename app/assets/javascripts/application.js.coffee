@@ -6,5 +6,11 @@
 #= require test_ora
 
 # for more details see: http://emberjs.com/guides/application/
-window.TestOra = Ember.Application.create()
+window.TestOra = Ember.Application.create
+#  LOG_TRANSITIONS: true
+  LOG_VIEW_LOOKUPS: true
+#  LOG_ACTIVE_GENERATION: true
+#  LOG_RESOLVER: true
+
+
 
