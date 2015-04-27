@@ -12,3 +12,9 @@ TestOra.Router.map ()->
     @route 'list'
     @resource 'review', {path: '/:review_id'}, ()->
       @route 'edit'
+
+  @resource 'recipes', ()->
+    @route 'new'
+    @route 'list'
+    @resource 'recipe', {path: '/:recipe_id'}, ()->
+      @route 'edit'
