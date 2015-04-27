@@ -46,5 +46,5 @@ Rails.application.routes.draw do
   resources :blogs
   resources :recipes
   resources :reviews
-
+  get '/logs', to: 'logs#index'
 end
