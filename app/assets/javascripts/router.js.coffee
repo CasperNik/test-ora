@@ -1,5 +1,10 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 TestOra.Router.map ()->
-# @resource('posts')
+  @resource 'blogs', ()->
+    @route 'new'
+    @route 'list'
+    @resource 'blog', {path: '/:blog_id'}, ()->
+      @route 'edit'
+      @route 'delete'
 

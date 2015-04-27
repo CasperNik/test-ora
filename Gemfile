@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => "bootstrap3"
 gem 'jbuilder', '~> 2.0'
 
 gem 'annotate', '~> 2.6.5'
@@ -21,7 +22,7 @@ gem 'devise'
 
 # ember
 gem 'ember-rails'
-gem 'ember-source'
+gem 'ember-source', '~> 1.11.3'
 
 group :development, :test do
   gem 'pry-rails'
@@ -38,7 +39,7 @@ end
 
 group :development do
   gem 'spring'
-  gem 'rack-mini-profiler'
+  # gem 'rack-mini-profiler'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails_best_practices'

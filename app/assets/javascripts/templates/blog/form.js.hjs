@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-6">
+        <form class="horizontal sky-form">
+            <fieldset>
+                <section>
+                    <label>Title</label>
+                    <label class="input">
+                        {{input type='text' value=model.title autofocus='true'}}
+                    </label>
+                </section>
+                <section>
+                    <label>Text</label>
+                    <label class="input">
+                        {{textarea value=model.text class='form-textarea' rows='5' cols='72' required='true'}}
+                    </label>
+                </section>
+                {{#if model.isError}}
+                    <div class="alert alert-danger alert-dismissible">
+                        <button class="close" type="button">
+                            <span>&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        {{model.modelError}}
+                    </div>
+                {{/if}}
+            </fieldset>
+            <footer>
+                <button {{action 'save'}} class="button btn-u btn-u-blue">Save</button>
+                {{#link-to 'blogs' class='button btn-u btn-u-red'}}Cancel{{/link-to}}
+            </footer>
+        </form>
+    </div>
+    <div class="col-sm-6">
+        <h2>{{model.title}}</h2>
+
+        <p>{{model.text}}</p>
+    </div>
+</div>

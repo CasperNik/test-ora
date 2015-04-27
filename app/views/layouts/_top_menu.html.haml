@@ -1,0 +1,23 @@
+#navbar.navbar.navbar-default
+  #navbar-container.navbar-container
+    %button#menu-toggler.navbar-toggle.menu-toggler.pull-left{:type => "button", data:{'target'=>'.sidebar-nav'}}
+      %span.sr-only Toggle sidebar
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    .navbar-header.pull-left
+      %a.navbar-brand{:href => "/"}
+        %img{:src => "#{image_path 'logo.png'}", :title => "Archery Fit", :height => "25"}
+
+    .navbar-buttons.navbar-header.pull-right{:role => "navigation"}
+      %ul.nav.ace-nav
+        %li.light-blue.last{style:'border:none;'}
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            = image_tag image_path('no_image.svg'), class: 'nav-user-photo'
+            %span.user-info
+              %small Welcome,
+              = current_user.email
+            %i.ace-icon.fa.fa-caret-down
+          %ul.user-menu.dropdown-menu-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close{style:'margin-top:8px;'}
+            %li
+              = link_to "<i class='ace-icon fa fa-power-off'></i>Logout".html_safe, destroy_user_session_path, method: :delete
