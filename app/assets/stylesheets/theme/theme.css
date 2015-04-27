@@ -52,7 +52,7 @@ body {
 }
 
 .sidebar + .main-content {
-    margin-left: 190px;
+    margin-left: 290px;
 }
 
 .page-content {
@@ -2147,7 +2147,7 @@ pre.prettyprint {
 }
 
 .sidebar {
-    width: 190px;
+    width: 290px;
     float: left;
     position: static;
     padding-left: 0;

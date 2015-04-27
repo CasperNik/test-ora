@@ -1,6 +1,3 @@
-TestOra.BlogsController = Ember.ArrayController.extend
-  sortProperties: ['created_at', 'updated_at']
-
 TestOra.BlogsNewController = Ember.Controller.extend
   actions:
     save: ()->
@@ -12,7 +9,8 @@ TestOra.BlogsNewController = Ember.Controller.extend
         , (blog)->
           console.log blog)
 
-TestOra.BlogsListController = Ember.Controller.extend
+TestOra.BlogsListController = Ember.ArrayController.extend
+  sortProperties: ['id']
   actions:
     delete: (id)->
       blog = @get('content').find((b)->

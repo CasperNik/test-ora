@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   def index
-    @list = Blog.all
+    @list = Blog.all.order(created_at: :desc)
     render json: @list
   end
 
