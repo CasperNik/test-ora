@@ -1,0 +1,12 @@
+<div class="shadow-wrapper">
+    <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+        <h2>{{model.title}}</h2>
+
+        <p>{{model.text}}</p>
+        <small class="pull-right"><em>Created at {{show_date_time model.created_at}}</em></small>
+        <p class="margin-top-20">
+            {{#link-to 'recipe.edit' model class='button btn-u btn-u-blue'}}Edit{{/link-to}}
+            {{#link-to 'recipes.list' class='button btn-u'}}Cancel{{/link-to}}
+        </p>
+    </div>
+</div>

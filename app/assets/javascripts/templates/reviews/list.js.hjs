@@ -7,11 +7,11 @@
     {{#each item in model}}
         <li>
             <h2>{{item.title}}</h2>
-
             <p>{{item.text}}</p>
             <small class="pull-right"><em>Created at {{show_date_time item.created_at}}</em></small>
             <div class="clearfix"></div>
         </li>
+        {{#link-to 'review.index' item class='button btn-u'}}Show{{/link-to}}
         {{#link-to 'review.edit' item class='button btn-u btn-u-blue'}}Edit{{/link-to}}
         <button {{action 'delete' item.id}} class="button btn-u btn-u-red">Delete</button>
         <hr class="devider devider-db">

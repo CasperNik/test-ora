@@ -32,7 +32,6 @@
     </div>
     <div class="col-sm-6">
         <h2>{{model.title}}</h2>
-
         <p>{{model.text}}</p>
     </div>
 </div>
