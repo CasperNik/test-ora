@@ -7,7 +7,10 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new review_params
-    @review.save if @review.valid?
+    if @review.valid?
+      @review.save
+      Log.log_activity(@review, current_user, 'created')
+    end
     render json: {review: @review}
   end
 
@@ -22,13 +25,17 @@ class ReviewsController < ApplicationController
       review.title = review_params[:title]
       review.text = review_params[:text]
     end
-    @review.save if @review.valid?
+    if @review.valid?
+      @review.save
+      Log.log_activity(@review, current_user, 'updated')
+    end
     render json: {review: @review}
   end
 
   def destroy
     @review = Review.find_by id: params[:id]
     @review.destroy
+    Log.log_activity(@review, current_user, 'destroyed')
     render json: {review: @review}
   end
 

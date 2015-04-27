@@ -7,7 +7,10 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new recipe_params
-    @recipe.save if @recipe.valid?
+    if @recipe.valid?
+      @recipe.save
+      Log.log_activity(@recipe, current_user, 'created')
+    end
     render json: {recipe: @recipe}
   end
 
@@ -22,13 +25,17 @@ class RecipesController < ApplicationController
       recipe.title = recipe_params[:title]
       recipe.text = recipe_params[:text]
     end
-    @recipe.save if @recipe.valid?
+    if @recipe.valid?
+      @recipe.save
+      Log.log_activity(@recipe, current_user, 'updated')
+    end
     render json: {recipe: @recipe}
   end
 
   def destroy
     @recipe = Recipe.find_by id: params[:id]
     @recipe.destroy
+    Log.log_activity(@recipe, current_user, 'destroyed')
     render json: {recipe: @recipe}
   end
 
