@@ -8,10 +8,10 @@
             <b class='arrow'></b>
         </li>
         <li id='recipes'>
-            <a href='#'>
+            {{#link-to 'recipes'}}
                 <i class='menu-icon fa fa-edit'></i>
                 <span class='menu-text'>Recipes</span>
-            </a>
+            {{/link-to}}
             <b class='arrow'></b>
         </li>
         <li id='reviews'>

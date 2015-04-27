@@ -1,0 +1,4 @@
+<div class="headline">
+    <h2>Recipes</h2>
+</div>
+{{outlet}}
