@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427081639) do
+ActiveRecord::Schema.define(version: 20150428094218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150427081639) do
     t.string "t_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "destroyed_title"
   end
 
   add_index "logs", ["logable_type", "logable_id"], name: "index_logs_on_logable_type_and_logable_id", using: :btree

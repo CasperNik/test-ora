@@ -10,6 +10,8 @@ TestOra.BlogsNewController = Ember.Controller.extend
           console.log blog)
 
 TestOra.BlogsListController = Ember.ArrayController.extend
+  sortProperties: ['created_at']
+  needs: ['application']
   actions:
     delete: (id)->
       blog = @get('content').find((b)->

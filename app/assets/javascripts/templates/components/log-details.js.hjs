@@ -1,0 +1,31 @@
+{{#if isElement}}
+    <time class="cbp_tmtime" datetime="">
+        <span>{{show_date_activity log.created_at}}</span><span>{{show_date_month log.created_at}}</span></time>
+    <i class="cbp_tmicon rounded-x hidden-xs"></i>
+    <div class="cbp_tmlabel">
+        <div class="row">
+            <div class="col-md-12">
+                <p>{{log.user}} has {{log.t_type}} {{log.m_type}}
+                    {{#link-to log.m_type log.logable class='link'}}
+                        {{log.logable.title}}
+                    {{/link-to}}
+                </p>
+            </div>
+        </div>
+    </div>
+{{else}}
+    {{#if isShow}}
+        <time class="cbp_tmtime" datetime="">
+            <span>{{show_date_activity log.created_at}}</span><span>{{show_date_month log.created_at}}</span></time>
+        <i class="cbp_tmicon rounded-x hidden-xs"></i>
+        <div class="cbp_tmlabel">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{log.user}} has {{log.t_type}} {{log.m_type}}
+                        {{log.destroyed_title}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+{{/if}}

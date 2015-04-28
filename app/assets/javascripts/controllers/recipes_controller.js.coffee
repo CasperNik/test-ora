@@ -10,6 +10,7 @@ TestOra.RecipesNewController = Ember.Controller.extend
           console.log recipe)
 
 TestOra.RecipesListController = Ember.Controller.extend
+  needs: ['application']
   actions:
     delete: (id)->
       recipe = @get('content').find((b)->

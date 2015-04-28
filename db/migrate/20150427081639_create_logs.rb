@@ -1,7 +1,7 @@
 class CreateLogs < ActiveRecord::Migration
   def change
     create_table :logs do |t|
-      t.references :logable, :polymorphic => true, index: true
+      t.references :logable, :polymorphic => true
       t.string :user
       t.string :t_type
       t.timestamps null: false

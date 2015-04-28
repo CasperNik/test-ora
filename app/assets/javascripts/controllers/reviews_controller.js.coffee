@@ -10,6 +10,7 @@ TestOra.ReviewsNewController = Ember.Controller.extend
           console.log review)
 
 TestOra.ReviewsListController = Ember.Controller.extend
+  needs: ['application']
   actions:
     delete: (id)->
       review = @get('content').find((b)->

@@ -1,4 +1,4 @@
-TestOra.Recipe = DS.Model.extend
+TestOra.Recipe = TestOra.Logable.extend
   title: DS.attr('string')
   text: DS.attr('string')
   created_at: DS.attr('date')

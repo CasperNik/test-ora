@@ -21,7 +21,5 @@
             {{/link-to}}
         {{/link-to}}
     </ul>
-    {{#view 'activity'}}
-        <h2>Activity</h2>
-    {{/view}}
+    {{render 'activity' model}}
 </div>

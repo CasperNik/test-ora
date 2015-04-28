@@ -2,13 +2,14 @@
 #
 # Table name: logs
 #
-#  id           :integer          not null, primary key
-#  logable_id   :integer
-#  logable_type :string
-#  user         :string
-#  t_type       :string
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id              :integer          not null, primary key
+#  logable_id      :integer
+#  logable_type    :string
+#  user            :string
+#  t_type          :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  destroyed_title :string
 #
 # Indexes
 #
