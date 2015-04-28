@@ -1,0 +1,7 @@
+<div class="activity-wrap margin-top-20">
+    <ul class="timeline-v2">
+        {{#each log in model}}
+            {{log-details log=log tagName="li"}}
+        {{/each}}
+    </ul>
+</div>

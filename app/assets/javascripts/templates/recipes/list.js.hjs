@@ -12,6 +12,7 @@
             <small class="pull-right"><em>Created at {{show_date_time item.created_at}}</em></small>
             <div class="clearfix"></div>
         </li>
+        {{#link-to 'recipe.index' item class='button btn-u'}}Show{{/link-to}}
         {{#link-to 'recipe.edit' item class='button btn-u btn-u-blue'}}Edit{{/link-to}}
         <button {{action 'delete' item.id}} class="button btn-u btn-u-red">Delete</button>
         <hr class="devider devider-db">

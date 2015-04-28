@@ -10,4 +10,5 @@
 #
 
 class Recipe < ActiveRecord::Base
+  include Logable
 end

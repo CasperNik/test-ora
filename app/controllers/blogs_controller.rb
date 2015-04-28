@@ -7,7 +7,10 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new blog_params
-    @blog.save if @blog.valid?
+    if @blog.valid?
+      @blog.save
+      Log.log_activity(@blog, current_user, 'created')
+    end
     render json: {blog: @blog}
   end
 
@@ -22,13 +25,17 @@ class BlogsController < ApplicationController
       blog.title = blog_params[:title]
       blog.text = blog_params[:text]
     end
-    @blog.save if @blog.valid?
+    if @blog.valid?
+      @blog.save
+      Log.log_activity(@blog, current_user, 'updated')
+    end
     render json: {blog: @blog}
   end
 
   def destroy
     @blog = Blog.find_by id: params[:id]
     @blog.destroy
+    Log.log_activity(@blog, current_user, 'destroyed')
     render json: {blog: @blog}
   end
 

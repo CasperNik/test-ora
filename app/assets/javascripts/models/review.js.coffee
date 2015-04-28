@@ -1,4 +1,4 @@
-TestOra.Review = DS.Model.extend
+TestOra.Review = TestOra.Logable.extend
   title: DS.attr('string')
   text: DS.attr('string')
   created_at: DS.attr('date')

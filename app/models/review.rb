@@ -10,4 +10,6 @@
 #
 
 class Review < ActiveRecord::Base
+  include Logable
+
 end

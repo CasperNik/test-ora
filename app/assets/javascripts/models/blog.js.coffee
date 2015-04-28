@@ -1,4 +1,4 @@
-TestOra.Blog = DS.Model.extend
+TestOra.Blog = TestOra.Logable.extend
   title: DS.attr('string')
   text: DS.attr('string')
   created_at: DS.attr('date')

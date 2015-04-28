@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.activity-wrap {
+    background-color: white;
+    padding-top: 5px;
+    padding-right: 5px;
+    overflow-y: scroll;
+}
+
+.activity-wrap > ul {
+    margin-left: 5px;
+}
+
+a.link {
+    color: green;
+    text-decoration: underline;
+}
